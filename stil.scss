@@ -2,113 +2,94 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 
+
+$main-body-color:#000;
+$header-color:#595959;
+$white-color:#fff;
+$heder-list-color:#d9d9d9;
+$text-color-grey:#303030;
+$red-color:#bf0f0f;
+$darker-grey:#474747;
+$background-color:#F4F4F4;
+
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-body {
-  background-color: #f4f4f4;
+body { 
+  .swiper-slide+.swiper-slide-active
+  {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  }
+ 
+
+  color:$main-body-color;
+   body img {
+    max-width: 100%;
+  }  
 }
 
-body img {
-  max-width: 100%;
-}
+
 
 .header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-}
+  .h2 {
 
-.header .h2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 75px;
-  width: 100%;
-  background-color: #d9d9d9;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0 5rem;
-}
+    display: flex;
+    height: 72px;
+    width: 100%;
+    background-color:$heder-list-color;
+    
+    justify-content: space-between;
+  
+    align-items: center;
+    padding: 0 5rem;
+  }
+   
+  .h2 ,.language ul {
+    display: flex;
+    gap: 1rem;
+  }
 
-.header .h2 .language ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 1rem;
-}
+  .h2 .language ul li a {
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $header-color;
+    text-decoration-line: underline;
+  }
+  .navbar {
+    display: flex;
+    justify-content: center;
+    height: 64px;
+    margin: 0 5rem;
+  }
 
+}
 .header .h2 .language ul li {
   list-style-type: none;
 }
 
-.header .h2 .language ul li a {
-  text-decoration: none;
-  font-family: "Roboto", sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 18px;
-  letter-spacing: 0em;
-  text-align: left;
-  color: #595959;
-  -webkit-text-decoration-line: underline;
-  text-decoration-line: underline;
-}
-
-.header .h2 .language ul li .active {
-  text-decoration: none;
-  color: #888787;
-}
-
-.header .navbar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  height: 68px;
-  margin: 0 5rem;
-}
-
 .header .navbar ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
   flex: 1;
 }
 
 .header .navbar ul li {
   padding: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
   flex: 1;
   list-style-type: none;
   border: 0.5px solid rgba(136, 135, 135, 0.4);
@@ -127,12 +108,11 @@ body img {
 
 main .image {
   position: relative;
-}
-
-main .image .strelicaImg {
-  position: absolute;
-  bottom: 2rem;
-  left: 50vw;
+  .strelicaImg {
+    position: absolute;
+    bottom: 2rem;
+    left: 50vw;
+  }
 }
 
 main .image .strelicaImg:hover {
@@ -140,16 +120,12 @@ main .image .strelicaImg:hover {
 }
 
 main .firstPar {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin: 3rem 0;
   gap: 2rem;
 }
 
 main .firstPar .image1 {
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
   flex: 1;
 }
 
@@ -160,34 +136,26 @@ main .firstPar .image1 .firstParImg {
 }
 
 main .firstPar .rightPar {
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
   flex: 1;
   margin-right: 10rem;
 }
 
 main .firstPar .rightPar .rightUp .title {
   margin: 2rem 0 1rem 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
   justify-content: flex-start;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
-  font-size: 42px;
-  line-height: 34px;
-  color: #303030;
+  font-size: 40px;
+  line-height: 32px;
+  color:$text-color-grey;
 }
 
 main .firstPar .rightPar .rightUp .line {
   height: 6px;
   width: 10vw;
-  background-color: #bf0f0f;
+  background-color:$red-color;
   margin-bottom: 1rem;
 }
 
@@ -199,10 +167,10 @@ main .firstPar .rightPar .rightUp .subTitle h3 {
   font-family: "Inter", sans-serif;
   font-size: 28px;
   font-weight: 400;
-  line-height: 34px;
+  line-height: 32px;
   letter-spacing: 0em;
   text-align: left;
-  color: #474747;
+  color:$darker-grey;
 }
 
 main .firstPar .rightPar .rightUp hr {
@@ -220,17 +188,17 @@ main .firstPar .rightPar .rightMain p {
   font-weight: 400;
   font-size: 14px;
   line-height: 160%;
-  color: #474747;
+  color:$darker-grey;
 }
 
 main .firstPar .rightPar .rightMain .aboutUs {
   margin-top: 5rem;
   display: inline-block;
   padding: 14px 16px;
-  background-color: #bf0f0f;
+  background-color: $red-color;
   border: 0;
-  border: 2px solid #bf0f0f;
-  color: #fff;
+  border: 2px solid $red-color;
+  color: $white-color;
   text-align: center;
   font-weight: 500;
   width: auto;
@@ -242,17 +210,15 @@ main .firstPar .rightPar .rightMain .aboutUs:hover {
   cursor: pointer;
 }
 
+
+
 main .thirdPar {
   margin-top: 3rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
+
+  
 }
 
 main .thirdPar h4 {
@@ -263,44 +229,29 @@ main .thirdPar h4 {
   letter-spacing: 0em;
   text-align: left;
   text-transform: uppercase;
-  color: #474747;
+  color: $darker-grey;
 }
 
-main .thirdPar .line {
+main .thirdPar line {
   height: 2px;
   width: 10%;
-  background-color: #bf0f0f;
-  margin-top: 0.5rem;
+  background-color: $red-color;
+  margin-top: 1rem;
 }
 
 main .fourthPar {
   margin-top: 5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
 }
 
 main .fourthPar .fourthTitle {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
+  gap: 1rem;
 }
 
 main .fourthPar .fourthTitle h2 {
@@ -311,7 +262,12 @@ main .fourthPar .fourthTitle h2 {
   font-size: 42px;
   line-height: 34px;
   text-align: center;
+  
 }
+main .fourthPar .fourthTitle h3 {
+  color:$darker-grey;
+}
+
 
 .numbers {
   width: 100%;
@@ -323,17 +279,27 @@ main .fourthPar .fourthTitle h2 {
   align-items: center;
   text-align: center;
   padding: 0 25px;
+  color:$white-color;
+  font-family: "Inter", sans-serif;
+  
 
 }
-
+.fifthPar{
+ background-color: $background-color; 
+  color: $darker-grey;
+  text-align: center;
+  
 .fiveTitle {
   text-align: center;
   margin-top: 50px;
+  font-family: "Inter", sans-serif;
+
 }
 
 .fiveDescr {
   text-align: center;
   padding: 30px;
+  font-family: "Roboto", sans-serif;
 }
 
 .fiveProducts {
@@ -344,9 +310,17 @@ main .fourthPar .fourthTitle h2 {
   width: 100%;
 }
 
+}
+ 
+
+
 .sixTitle {
   text-align: center;
   margin-top: 50px;
+  font-family: "Roboto", sans-serif;
+  color:$darker-grey;
+  
+
 }
 
 .sixBrands {
@@ -355,6 +329,8 @@ main .fourthPar .fourthTitle h2 {
   display: flex;
   align-items: center;
   padding: 0 100px;
+  font-family: "Inter", sans-serif;
+  color:$darker-grey;
 
   .brand {
     flex: 1;
@@ -381,29 +357,35 @@ main .fourthPar .fourthTitle h2 {
 
 .sixthPar {
   text-align: center;
+  gap:2rem;
 }
 
 .sixBtn {
-  background-color: #bf0f0f;
-  border: 2px solid #bf0f0f;
-  color: #fff;
+  background-color: $red-color;
+  border: 0;
+  border: 2px solid $red-color;
+  color:$white-color;
   text-align: center;
   font-weight: 500;
   width: auto;
-  height: 50px;
   border-radius: 4px;
   font-size: 16px;
-  align-items: center;
+  font-family: "Roboto", sans-serif;
+  padding: 14px 16px;
+  
 
 }
 
 footer {
+
+  background-image: url('./img/pozadina.png');
   position: relative;
   z-index: -2;
-  margin-top: 50px;
-  background-image: url('./img/pozadina.png');
   background-size: cover;
-  height: 300px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  
 
   .footer {
     padding: 70px;
@@ -414,35 +396,90 @@ footer {
     .footerLogo{
       height: 86px;
       width:86px;
+
+      
     }
+    
     .contact, .title {
       margin-bottom: 15px;
       display: flex;
+      font-family: "Inter", sans-serif;
     }
     
     .footerList{
       ul{
+        list-style-type: none;
         display:flex;
         flex-direction: column;
-        gap:0.rem;
+        gap:0rem;
         margin-bottom: 5px;
+        font-family: "Roboto", sans-serif;
+        color: $white-color;
+        gap:0.5rem;
       }
     }
-
+    .border{
+      border-left: 2px solid;
+      color: rgba(196, 196, 196, 0.4);
+      padding:16px;
+    }
+    .footerMiddle{
+    
+      font-family: "Roboto", sans-serif;
+      color:$white-color;
+    
+    }
+    
 
   }
+   .footerRight{
+    font-family: "Roboto", sans-serif;
+    color:$white-color;
+   }
 
   .footerDown {
-    background-color: rgba(0, 0, 0, 0.33);
     position: absolute;
+    background-color: rgba(0, 0, 0, 0.33);
     width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 20px;
-
     bottom: 0;
+    font-family: "Roboto", sans-serif;
+    color: $header-color;
+    text-decoration: underline;
+
+    .layout{
+      display: flex;
+      gap: 10px;
+    }
   }
 
 }
 
+.swiper {
+  width: 600px;
+  height: 300px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  .swiper-button-prev{
+    color:$red-color;
+  }
+  .swiper-button-next{
+    color:$red-color;
+
+  }
+  
+}
+
+
+.swiper-slide{
+  display: flex;
+  flex-direction: column;
+
+  img{
+    height: 72%;
+  }
+}
 /*# sourceMappingURL=style.css.map */
